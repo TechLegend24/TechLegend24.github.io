@@ -3,16 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>workspace</title>
+    <title>Developer Portfolio</title>
     <style>
       :root {
-        --bg: #0d1117;
-        --card-bg: #161b22;
-        --border: #30363d;
-        --text: #c9d1d9;
-        --text-muted: #8b949e;
-        --accent: #58a6ff;
-        --glow: rgba(88, 166, 255, 0.15);
+        --bg: #0b0f19;
+        --card-bg: #131a26;
+        --border: #222f47;
+        --text-main: #ffffff;
+        --text-sub: #94a3b8;
+        --accent: #38bdf8;
       }
 
       * {
@@ -22,97 +21,67 @@
       }
 
       body {
-        font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         background-color: var(--bg);
-        color: var(--text);
+        color: var(--text-main);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        padding: 20px;
+        padding: 24px;
       }
 
-      .profile-card {
+      .card {
         background-color: var(--card-bg);
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 32px;
-        max-width: 440px;
+        max-width: 480px;
         width: 100%;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .profile-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--accent);
-        box-shadow: 0 15px 35px var(--glow);
-      }
-
-      .header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       }
 
       h1 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #ffffff;
-      }
-
-      .status-dot {
-        width: 8px;
-        height: 8px;
-        background-color: #2ea44f;
-        border-radius: 50%;
-        display: inline-block;
-        box-shadow: 0 0 8px #2ea44f;
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
       }
 
       p {
-        font-size: 0.95rem;
+        font-size: 1rem;
         line-height: 1.6;
-        color: var(--text-muted);
+        color: var(--text-sub);
         margin-bottom: 24px;
       }
 
-      .tags {
+      .stack {
         display: flex;
-        gap: 8px;
+        gap: 12px;
         flex-wrap: wrap;
       }
 
-      .tag {
+      .tech {
         font-size: 0.85rem;
-        background-color: var(--bg);
-        border: 1px solid var(--border);
-        color: var(--text);
-        padding: 6px 12px;
-        border-radius: 6px;
-        transition: all 0.2s ease;
-      }
-
-      .tag:hover {
-        border-color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
         color: var(--accent);
-        background-color: rgba(88, 166, 255, 0.05);
+        background-color: rgba(56, 189, 248, 0.1);
+        padding: 6px 14px;
+        border-radius: 6px;
+        border: 1px solid rgba(56, 189, 248, 0.2);
       }
     </style>
   </head>
   <body>
-    <div class="profile-card">
-      <div class="header">
-        <h1>yo, i'm a chill guy</h1>
-        <span class="status-dot"></span>
-      </div>
-      <p>just messing around with tech, building cool stuff, and breaking things to see how they work.</p>
-      <div class="tags">
-        <span class="tag">#python</span>
-        <span class="tag">#swift</span>
-        <span class="tag">#web-dev</span>
-        <span class="tag">#hardware</span>
+    <div class="card">
+      <h1>Hi, I'm a developer.</h1>
+      <p>I focus on building clean applications, exploring new hardware, and working across software ecosystems.</p>
+      <div class="stack">
+        <span class="tech">Python</span>
+        <span class="tech">Swift</span>
+        <span class="tech">Web</span>
       </div>
     </div>
   </body>
