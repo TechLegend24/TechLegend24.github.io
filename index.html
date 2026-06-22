@@ -3,17 +3,117 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Site</title>
+    <title>workspace</title>
     <style>
+      :root {
+        --bg: #0d1117;
+        --card-bg: #161b22;
+        --border: #30363d;
+        --text: #c9d1d9;
+        --text-muted: #8b949e;
+        --accent: #58a6ff;
+        --glow: rgba(88, 166, 255, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
+        font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+        background-color: var(--bg);
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .profile-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 32px;
+        max-width: 440px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .profile-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 15px 35px var(--glow);
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #2ea44f;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 8px #2ea44f;
+      }
+
+      p {
+        font-size: 0.95rem;
         line-height: 1.6;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      .tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        font-size: 0.85rem;
+        background-color: var(--bg);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+      }
+
+      .tag:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background-color: rgba(88, 166, 255, 0.05);
       }
     </style>
   </head>
   <body>
-    <h1>Hello 👋</h1>
-    <p>I code in C++, Python, and Swift.</p>
+    <div class="profile-card">
+      <div class="header">
+        <h1>yo, i'm a chill guy</h1>
+        <span class="status-dot"></span>
+      </div>
+      <p>just messing around with tech, building cool stuff, and breaking things to see how they work.</p>
+      <div class="tags">
+        <span class="tag">#python</span>
+        <span class="tag">#swift</span>
+        <span class="tag">#web-dev</span>
+        <span class="tag">#hardware</span>
+      </div>
+    </div>
   </body>
 </html>
